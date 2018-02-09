@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_wifi_communication"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_scan_wifi"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="扫描WiFi"
+            style="@android:style/Widget.DeviceDefault.Button.Inset" />
+
+        <Button
+            android:id="@+id/btn_check_wifi"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="检查WiFi状态"
+            style="@android:style/Widget.DeviceDefault.Light.Button.Inset" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_open_wifi"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="打开WiFi"
+            style="@android:style/Widget.DeviceDefault.Button.Inset" />
+
+
+        <Button
+            android:id="@+id/btn_close_wifi"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="关闭WiFi"
+            style="@android:style/Widget.DeviceDefault.Button.Inset" />
+
+        <Button
+            android:id="@+id/btn_connect_sever"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="连接模块"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#EEE8AA">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IP: "/>
+
+            <EditText
+                android:id="@+id/edit_sever_ip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PORT: "/>
+
+            <EditText
+                android:id="@+id/edit_sever_port"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wifi列表"/>
+    <ListView
+        android:id="@+id/list_view_device"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        android:background="#d0d0d0">
+
+    </ListView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收发信息"/>
+    <TextView
+        android:id="@+id/text_receive"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:maxLines="100"
+        android:paddingLeft="5dp"
+        android:background="#f0c0c0"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp">
+
+        <EditText
+            android:id="@+id/send_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:maxLength="20"
+            android:lines="1"
+            android:maxLines="1"
+            android:ems="10"
+            android:textColor="#cccccc"
+            android:cursorVisible="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_toLeftOf="@+id/send_data_button"
+            android:layout_alignParentBottom="true"/>
+        <Button
+            android:id="@+id/send_data_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textSize="15dp"
+            android:text="发送"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"/>
+    </RelativeLayout>
+
+</LinearLayout>
